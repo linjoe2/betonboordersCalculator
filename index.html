@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="stap1">
+        <form>
+  <select class="stap1-form">
+    <option value="part" selected="part">Particulier</option>
+    <option value="zak">Zakelijk</option>
+  </select>
+</form>
+    </div>
+    <div class="stap2">
+        <select class="provincie">
+           <option value="North Holland">Noord Holland</option>
+           <option value="Overijsel">Overijssel</option>
+           <option value="Groningen">Groningen</option>
+           <option value="Limburg">Limburg</option>
+           <option value="Zeeland">Zeeland</option>
+           <option value="South Holland">Zuid Holland</option>
+           <option value="Drenthe">Drenthe</option>
+           <option value="Noord Brabant">Noord Brabant</option>
+           <option value="Flevoland">Flevoland</option>
+           <option value="Almere">Almere</option>
+           <option
+            value="Gelderland">Gelderland</option>
+           <option value="Friesland">Friesland</option>
+           <option value="Utrecht">Utrecht</option>
+           <option value="Waddeneilanden">Waddeneilanden</option>
+
+           
+        </select>
+      </form>
+    </div>
+    <div class="stap3">
+
+
+<br><button  id="Boren">Boren</button>
+<br><button id="Zagen">Zagen</button>
+<br><button id="Frezen">Frezen</button>
+<br><button id="Betonslopen">Beton slopen</button>
+<br><button id="Airco">Airco installatie(innova monoblock)<br></button>
+<br><button id="Kruipruimteventilatie">Kruipruimte ventilatie</button>
+
+<div class="sectie" id="BorenSectie">
+<h2>Boren</h2>
+
+<form>
+  <div class='BorenItem'>
+      <input class="WeergaveAantal" type="number"    id="borenaantal" name="aantal"
+      value="1" >
+    <input type="number" name="BorenMM" id="BorenMM" class="BorenMM" value="100">
+    <select name="bloca" id="bloca">
+      <option value="muur">Muur</option>
+      <option value="Vloer">Vloer</option>
+      <option value="Plafond">Plafond</option>
+    </select>
+    <div class="BorenItemTotaal"></div>
+  </div>
+  <button id="borenMin" type="button">-</button> 
+  </br><button id="borenPlus" type="button">+</button>
+</form>
+ 
+
+  <button class="infoButton">Toelichting</button>
+  <div class="info">
+    <p>In deze prijsindicatie voor het boren hebben we    gerekend met de volgende variabelen:</p>
+    <ul>
+    <li>
+    <p>We gaan het gat boren met een watergekoelde boor met     een afzuigring en een waterzuiger.</p>
+    </li>
+    <li>
+    <p>Indien het gaat om een betonnen wand zullen wij dit    gat boren met een statief. Om deze op te hangen boren   wij een gat van +-8mm naast het grote gat.</p>
+    </li>
+    <li>
+    <p>We boren het gat van binnen naar buiten.</p>
+    </li>
+    <li>
+    <p>Het gat bevindt zich lager dan 2,6 meter hoog.</p>
+    </li>
+    <li>
+    <p>Indien we omlaag boren onder stempelen we het gat en     vangen we de kern en het koelwater op.</p>
+    </li>
+    <li>
+    <p>Indien we een leiding raken hakken we deze uit     (indien mogelijk) op een manier dat deze door uw    elektricien/loodgieter gerepareerd kan worden.</p>
+    </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+<div class="sectie" id="ZagenSectie">
+<h2>Zagen</h2>
+<button value="wand">+ Wandsparing</button>
+      <button value="trap">+ Trapsparing</button>
+      <button value="kruip">+ Kruipluik</button>
+      <button value="Zagen">+ Beton zagen </button>
+
+  <table>
+  <tr>
+soort
+>Afmetingen
+Weet u of er staal nodig is?
+
+
+    <form>
+  <div class='WandItem'>
+       Wandsparing
+ Hoogte <input type="number" id="hoogte" name="hoogte" value="230" >
+          <br>
+          Breedte<input type="number" id="breedte" name="breedte"value="90"> 
+          <br>
+          Dikte<input type="number" id="dikte" name="dikte" value="10" >
+
+            <input type="radio" id="ja" name="staalNodig" value="ja">
+            <label for="ja">Ja</label>
+            <input type="radio" id="nee" name="staalNodig" value="nee">
+            <label for="nee">Nee</label> 
+            <input type="radio" id="unknown" name="staalNodig" value="unknown">
+            <label for="unknown">Weet ik niet</label>
+    </form>
+  </div>
+  <div id='TrapItem'>
+      Trapsparing
+        <input type="radio" id="standaard" name="maat" value="standaard" checked="true">
+        <label for="standaard">Standaard afmeetingen(200cmx90cm maximaal 25cm dik)</label>
+        <input type="radio" id="custom" name="maat" value="custom">
+        <label for="custom">custom maat</label>
+
+            <input type="radio" id="ja" name="staalNodig" value="ja">
+            <label for="ja">Ja</label>
+            <input type="radio" id="nee" name="staalNodig" value="nee">
+            <label for="nee">Nee</label> 
+            <input type="radio" id="unknown" name="staalNodig" value="unknown">
+            <label for="unknown">Weet ik niet</label>
+
+        <input type="checkbox" id="dichtmaken" name="dichtmaken" value="dichtmaken">
+  <label for="dichtmaken"> Vliezotrapgat dichtmaken</label><br>
+
+      
+  </div>
+  <div id='KruipItem'>
+    <tr>
+      <td>Kruipluik</td>
+      <td>
+        <input type="checkbox" id="dichtmaken" name="dikker" value="dikker">
+  <label for="dikker"> Dikker dan 25cm?</label><br>
+      </td>
+    </tr>
+      
+  </div>
+  <div id='ZagenItem'>
+    <tr>
+      <td>Beton Zagen</td>
+      <td>
+        <p>Dikte</p><input type="number" value="1"><p>cm</p>
+        <p>Meters</p><input type="number" value="1"><p>cm</p>
+      </td>
+      <td>
+
+      </td>
+    </tr>
+      
+  </div>
+
+  </table>
+
+  <button class="infoButton">Toelichting</button>
+  <div class="info">
+      <p><strong>Wandsparing</strong></p>
+      <p>In deze prijsindicatie voor het maken van een      wandsparing hebben we gerekend met de volgende      variabelen:</p>
+      <ul>
+      <li>
+      <p>Het onderstempelen van de constructie.</p>
+      </li>
+      <li>
+      <p>Het uithakken van de sparing.</p>
+      </li>
+      <li>
+      <p>U heeft geen kwetsbare vloer in de ruimte waar de      sparing moet komen (wij zagen met een watergekoelde zaag)     .</p>
+      </li>
+      <li>
+      <p>De prijs is exclusief het opruimen en afvoeren van       het puin, dit kunt u er los bij bestellen in de tool.</p>
+      </li>
+      <li>
+      <p>De prijs is exclusief het aanbrengen van permanente      verstevigingsmiddelen zoals een latei of een stalen     constructie. Indien dit wel nodig is neemt u dan contact      op, zodat we samen een plan kunnen maken.</p>
+      </li>
+      </ul>
+      <p>Deze prijs is een prijsindicatie voor het maken van      een sparing in een standaard situatie. Omdat het bij het      zagen van sparingen gaat om een constructieve ingreep     ontvangen wij graag foto&rsquo;s van de situatie zodat     wij een plan kunnen maken.</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><strong>Trapgat zagen</strong></p>
+      <p>Deze prijs is een prijsindicatie voor het maken van      een trapsparing in de standaard situatie. Omdat het bij     trapsparingen gaat om een grote constructieve ingreep     ontvangen wij graag foto&rsquo;s van de situatie van     boven en beneden zodat wij een plan kunnen maken. Onze     werkzaamheden bij het maken van een trapsparing zijn:</p>
+      <ul>
+      <li>
+      <p>Het uitzetten van de sparing, eventueel kunnen wij de      communicatie omtrent de maatvoering geheel uit uw handen      nemen indien u kiest voor een van onze vaste    trappenleveranciers.</p>
+      </li>
+      <li>
+      <p>De looproute bedekken met kleden en rubberen       matten.</p>
+      </li>
+      <li>
+      <p>Het plaatsen van een opvangbak onder de toekomstige      sparing.</p>
+      </li>
+      <li>
+      <p>Het zagen van het trapgat en het in kleine brokjes       hakken van het puin.</p>
+      </li>
+      <li>
+      <p>Het naar beneden lopen en afvoeren van het puin      (maximaal 2 verdiepingen)</p>
+      </li>
+      <li>
+      <p>Het eventueel uithakken van elektraleiding zodat deze      door uw elektricien gerepareerd kan worden.</p>
+      </li>
+      <li>
+      <p>Het netjes opleveren van de werkplek.</p>
+      </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><strong>Kruipluik</strong></p>
+      <p>In deze prijsindicatie voor het maken van kruipluik      we gerekend met de volgende variabelen:</p>
+      <ul>
+      <li>
+      <p>Een vloerdikte van maximaal 25 cm.</p>
+      </li>
+      <li>
+      <p>Het luik bevindt zich op de begane grond.</p>
+      </li>
+      <li>
+      <p>U heeft geen kwetsbare vloer op de betonvloer liggen       (wij zagen met een watergekoelde zaag).</p>
+      </li>
+      <li>
+      <p>Inclusief het weghakken van het puin.</p>
+      </li>
+      <li>
+      <p>Inclusief het opruimen en afvoeren van het puin (mits      geen trappen).</p>
+      </li>
+      <li>
+      <p>Inclusief de levering en installatie van een luik van      60x80cm of 50x70cm.</p>
+      </li>
+      <li>
+      <p>De prijs is exclusief het afsmeren met zandcement.</p>
+      </li>
+      </ul>
+  </div>
+</div>
+
+<div class="sectie" id='FrezenSectie'>
+  <h2>Frezen</h2>
+  <table>
+    <tr>
+      <th>Soort</th>
+      <th>Aantal</th>
+      <th>Lengte</th>
+    </tr>
+
+    <tr>
+      <td>Sleuven muur</td>
+      <td><input type="number" value="1"></td>
+      <td><input type="number" value="1">Meter</td>
+    </tr>
+    <tr>
+      <td>Sleuven vloer</td>
+      <td><input type="number" value="1"></td>
+      <td><input type="number" value="1">Meter</td>
+    </tr>
+     <tr>
+      <td>Sleuven plafond</td>
+      <td><input type="number" value="1"></td>
+      <td><input type="number" value="1">Meter</td>
+    </tr>
+    <tr>
+      <td>Wandcontactdoos</td>
+      <td><input type="number" value="1"></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
+  <button class="infoButton">Toelichting</button>
+  <div class="info">
+
+  </div>
+
+<div class="sectie" id='BetonslopenItem'>
+  <h2> Beton Slopen</h2>
+    Op aanvraag
+
+</div>
+
+
+<div class="sectie" id='AircoSectie'>
+  <h2>Innova Monoblock airco installatie</h2>
+  <h3>Waar doorheen moet de airco geplaatst worden?</h3>
+<button>Steen</button>
+<button>Beton</button>
+<button>Weet ik niet</button>
+<h3>Bent u in de gelegenheid te helpen metde airco tillen?</h3>
+<button>Ja</button>
+<button>Nee</button>
+
+
+<br>
+<button class="infoButton">Toelichting</button>
+  <div class="info">
+
+  </div>
+</div>
+
+
+<div class="sectie" id='KruipruimteventilatieSectie'>
+  <h2> Kruipruimte Ventilatie </h2>
+    <h3>Hoeveel kokers wilt u laten plaatsen?</h3>
+  <input type="number" value="2">
+  <br>
+<button class="infoButton">Toelichting</button>
+  <div class="info">
+
+  </div>
+</div>
+
+
+    </div>
+    <div class="stap4">
+    </div>
+    <div id="info"></div>
+
+    <div class="verwijzing">
+      <h2> Neem Contact op</h2>
+    </div>
+    <div class="buitenregio">
+      <h2> Dit gebied valt helaas buiten de regio waarin wij werken.</h2>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.1.0/ipgeolocation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>

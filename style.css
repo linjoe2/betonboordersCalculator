@@ -1,0 +1,18 @@
+.verwijzing, .buitenregio, .info, .sectie, .stap3 {
+  display: none;
+}
+
+.WeergaveAantal {
+  max-width:35px;
+  min-width:35px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+input {
+  max-width: 75px;
+}
